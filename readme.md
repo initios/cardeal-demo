@@ -4,6 +4,33 @@
 
 Un clon de Twitter para mostrar algunos ejemplos sobre Laravel.
 
+Para avanzar paso a paso:
+
+```bash
+# Ver todos los tag disponibles
+git tag
+
+# Ir al tag correspondiente
+git checkout 3
+```
+
+Cada uno incluye comentarios justo aquí debajo:
+
+> Cada vez que avances un paso lanza ```composer install``` y ```./artisan migrate``` para actualizar la base de datos
+> (¡si vas hacia atrás es posible que tengas que recrearla!)
+> Arrancar el servidor  con ```./artisan serve```
+
+### Paso 1
+
+#### Listado de Tweets
+
+· Creamos ruta, controlador y vista básicos para listar tweets genéricos, ```./artisan make:controller TweetController``` para generar el controlador
+· Creamos modelo y migración de base de datos para poder hacer la query, ```php artisan make:migration create_tweets_table``` y rellenamos a gusto
+· Migramos ```./artisan migrate``` (configura tu .env con los parámetros de base de datos)
+· Todavía no podemos ver nada ya que no tenemos nada en la base de datos, creamos una [semilla](https://laravel.com/docs/5.4/seeding) con ```./artisan make seeder``` y la rellenamos a gusto (ver fichero en seeds/DatabaseSeeder.php)
+* Tras lanzar ```./artisan db:seed``` podremos ver el listado de Tweets en la ruta /tweets
+
+
 ## About Laravel
 
 - [Simple, fast routing engine](https://laravel.com/docs/routing).
