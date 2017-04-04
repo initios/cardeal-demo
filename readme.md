@@ -1,4 +1,4 @@
-<p align="center"><img src="resources/assets/cardeal.png"></p>
+<img src="resources/assets/cardeal.png">
 
 ## Cardeal
 
