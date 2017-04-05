@@ -14,11 +14,10 @@ git tag
 git checkout 3
 ```
 
-Cada uno incluye comentarios justo aquí debajo:
-
 > Cada vez que avances un paso lanza ```composer install``` y ```./artisan migrate``` para actualizar la base de datos
 > (¡si vas hacia atrás es posible que tengas que recrearla!)
 > Arrancar el servidor  con ```./artisan serve```
+> Por último puedes recrear la base de datos de 0 lanzando ```make recreate```
 
 ### Paso 1
 
