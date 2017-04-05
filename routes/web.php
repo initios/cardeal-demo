@@ -17,4 +17,6 @@ Route::get('/', 'TweetController@index')->name('home');
 
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/users/{id}', 'UserController@index')->name('user.index');
+    Route::get('/users/{id}/tweets/create', 'UserTweetController@create')->name('user.tweet.create');
+    Route::post('/users/{id}/tweets/create', 'UserTweetController@store')->name('user.tweet.store');
 });
