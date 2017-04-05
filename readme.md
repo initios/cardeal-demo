@@ -79,7 +79,7 @@ Crearemos la ruta ```/users/{user_id}```, a la cual solo podrá acceder cada uno
 
 #### Proteger la vista de usuario
 
-* Ahora protegeremos esta vista configurando la autenticación que trae laravel por siguiendo su  [guia](https://laravel.com/docs/5.4/authentication#authentication-quickstart). Esto nos creará un AuthController, plantillas y demás. Básicamente lanzamos ```php artisan make:auth```
+* Ahora protegeremos esta vista configurando la autenticación que trae laravel siguiendo su [guia](https://laravel.com/docs/5.4/authentication#authentication-quickstart). Esto nos creará un AuthController, plantillas y demás. Básicamente lanzamos ```php artisan make:auth```
 
 * También nos añade un layout básico con bootstrap, así que modificamos nuestras templates para que hereden de ese layout base (layouts/app.blade.php). Las modificamos a gusto, tanto el layout como la pantalla de bienvenida que nos ha creado (home.blade.php)
 
@@ -92,13 +92,7 @@ Crearemos la ruta ```/users/{user_id}```, a la cual solo podrá acceder cada uno
 
 ## Enlaces de interés
 
-- [Laravel Cheatsheet](http://cheats.jesse-obrien.ca/)
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-- [Laravel documentation](https://laravel.com/docs)
+- [Official Documentation](https://laravel.com/docs)
+- [Cheatsheet](http://cheats.jesse-obrien.ca/)
 - [Laracasts](https://laracasts.com)
+- [PHP The Right Way](http://www.phptherightway.com/)
