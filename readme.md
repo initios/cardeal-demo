@@ -53,11 +53,18 @@ Ya puedes crear Tweets en local entrando en la **shell** con el comando ```./art
    }
 ```
 
+### Paso 2
 
-#### Semillas
+#### Semillas y factorías
 
-* Todavía no podemos ver nada ya que no tenemos nada en la base de datos, creamos una [semilla](https://laravel.com/docs/5.4/seeding) con ```./artisan make seeder``` y la rellenamos a gusto (ver fichero en seeds/DatabaseSeeder.php)
-* Tras lanzar ```./artisan db:seed``` podremos ver el listado de Tweets en la ruta /tweets
+Las semillas nos permitirán rellenar fácilmente la base de datos con datos de ejemplo.
+Las factorías es otra forma interesante de rellenar la base de datos, de momento elegimos las semillas que son mas fáciles para empezar.
+
+* Creamos una [semilla](https://laravel.com/docs/5.4/seeding) para usuarios y otra para Tweets con ```php artisan make:seeder UsersTableSeeder``` y ```php artisan make:seeder TweetsTableSeeder``` y la rellenamos a gusto. Debemos también ponerlos en el orden correcto en el fichero  seeds/DatabaseSeeder.php
+
+* Tras lanzar ```./artisan db:seed``` podremos ver el listado de Tweets recién generado en la ruta /tweets
+
+* También añadimos a la lista al usuario que ha creado el Tweet
 
 
 ## Enlaces de interés
