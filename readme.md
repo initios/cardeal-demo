@@ -79,7 +79,15 @@ Crearemos la ruta ```/users/{user_id}```, a la cual solo podrá acceder cada uno
 
 #### Proteger la vista de usuario
 
-* Ahora protegeremos esta vista configurando la autenticación que trae laravel por siguiendo su  [guia](https://laravel.com/docs/5.4/authentication#authentication-quickstart). Esto nos creará un AuthController, plantillas y demás
+* Ahora protegeremos esta vista configurando la autenticación que trae laravel por siguiendo su  [guia](https://laravel.com/docs/5.4/authentication#authentication-quickstart). Esto nos creará un AuthController, plantillas y demás. Básicamente lanzamos ```php artisan make:auth```
+
+* También nos añade un layout básico con bootstrap, así que modificamos nuestras templates para que hereden de ese layout base (layouts/app.blade.php). Las modificamos a gusto, tanto el layout como la pantalla de bienvenida que nos ha creado (home.blade.php)
+
+* Modificamos también la página home / y hacemos que la home sea nuestra vista pública de tweets cambiando el controlador en web.php. Le damos a esa vista el nombre "home" y a la de usuarios "user.index" para crear rutas a esta URL fácil
+
+* También configuramos el idioma de la APP en castellano y el nombre de la app en la config para que salgan los mensajes de error en nuestro idioma
+
+* Modificamos en AuthController la ruta a la que queremos redirigir cuando se realice un registro con éxito. En este momento deberíamos poder registrarnos y poder iniciar sesión sin embargo debemos proteger la vista de perfil todavía, hay varias estrategias pero añadimos un middleware en web.php (ver web.php). Si intentamos acceder sin sesión seremos redirigidos al formulario de iniciar sesión
 
 
 ## Enlaces de interés

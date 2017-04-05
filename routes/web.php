@@ -11,5 +11,10 @@
 |
 */
 
-Route::get('/tweets', 'TweetController@index');
-Route::get('/users/{id}', 'UserController@index');
+Auth::routes();
+
+Route::get('/', 'TweetController@index')->name('home');
+
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/users/{id}', 'UserController@index')->name('user.index');
+});
