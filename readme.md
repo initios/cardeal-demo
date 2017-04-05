@@ -66,6 +66,21 @@ Las factorías es otra forma interesante de rellenar la base de datos, de moment
 
 * También añadimos a la lista al usuario que ha creado el Tweet
 
+### Paso 3
+
+#### Perfil de usuario
+
+Crearemos la ruta ```/users/{user_id}```, a la cual solo podrá acceder cada uno de los usuarios (esto en el siguiente paso), y mostraremos los Tweets para ese único usuario.
+
+* Lo primero es añadir la ruta en ```routes/web.php```, el controlador ```UserController``` y crear la vista ```user/index.blade.php```. En este caso la ruta es especial ya que requiere el ID del usuario que queremos ver.
+
+
+### Paso 4
+
+#### Proteger la vista de usuario
+
+* Ahora protegeremos esta vista configurando la autenticación que trae laravel por siguiendo su  [guia](https://laravel.com/docs/5.4/authentication#authentication-quickstart). Esto nos creará un AuthController, plantillas y demás
+
 
 ## Enlaces de interés
 

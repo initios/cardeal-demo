@@ -1,4 +1,4 @@
-<h2>Mostrando {{ count($tweets) }} tweets</h2>
+<h2>{{ count($tweets) }} tweets</h2>
 
 <table class="table">
     @forelse ($tweets as $tweet)
