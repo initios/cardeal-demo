@@ -89,6 +89,18 @@ Crearemos la ruta ```/users/{user_id}```, a la cual solo podrá acceder cada uno
 
 * Modificamos en AuthController la ruta a la que queremos redirigir cuando se realice un registro con éxito. En este momento deberíamos poder registrarnos y poder iniciar sesión sin embargo debemos proteger la vista de perfil todavía, hay varias estrategias pero añadimos un middleware en web.php (ver web.php). Si intentamos acceder sin sesión seremos redirigidos al formulario de iniciar sesión
 
+### Paso 5
+
+#### Vista para añadir Tweets
+
+* Añadimos un enlace y una ruta a la navegación para para mostrar un formulario de añadir tweets y un controlador específico para estas vistas, recordar añadirlo dentro del grupo middleware que protege las rutas para usuarios identificados.
+
+* Añadimos el HTML para guardar un tweet y rellenamos también el método STORE del controlador para guardarlo, una vez creado redirigimos a la home para ver el nuevo tweet, si hubiese errores, volvemos a mostrar el formulario con los errores, conservando los campos que ya había rellenado el usuario
+
+* OJO a la función csrf_field
+
+* Sino lo has hecho antes debes instalar los locale para español, puedes copiar y pegar de https://github.com/caouecs/Laravel-lang/tree/master/src/es en la carpeta lang/es
+
 
 ## Enlaces de interés
 
